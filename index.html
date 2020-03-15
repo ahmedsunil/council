@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Council Contacts</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.css">
+    <style>
+
+        #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 12px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+        }
+
+        #myTable {
+        border-collapse: collapse; /* Collapse borders */
+        width: 100%; /* Full-width */
+        border: 1px solid #ddd; /* Add a grey border */
+        font-size: 12px; /* Increase font-size */
+        }
+
+        #myTable th, #myTable td {
+        text-align: left; /* Left-align text */
+        padding: 12px; /* Add padding */
+        }
+
+        #myTable tr {
+        /* Add a bottom border to all table rows */
+        border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+        /* Add a grey background color to the table header and on hover */
+        background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h6 class="text-center mx-3 my-3 ">Search by Council</h6>
+    <div class="row">
+        <div class="col ml-4">
+        </div>
+    </div>
+    <div class="row"  id="myUL">
+        <div class="col">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+<table id="myTable">
+  <tr class="header">
+  </tr>
+  <tr>
+    <td>
+        <div class="card">
+            <div class="card-body">
+              <h6>Name: Ahmed Sunil</h6>
+              <h6>Contact: 7626626</h6>
+              <h6>Council: Hulhudhuffaaru</h6>
+              <h6>Job: Dev</h6>
+            </div>
+          </div>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+        
+
+    <!-- <ul id="myUL">
+        <li><a href="#">Adele</a></li>
+        <li><a href="#">Agnes</a></li>
+
+        <li><a href="#">Billy</a></li>
+        <li><a href="#">Bob</a></li>
+
+        <li><a href="#">Calvin</a></li>
+        <li><a href="#">Christina</a></li>
+        <li><a href="#">Cindy</a></li>
+        </ul> -->
+
+
+
+<script>
+
+    "use strict";
+    fetch("data.json")
+        .then(function(resp){
+            return resp.json();
+        })
+        .then(function(data){
+            console.log(data);
+        })
+//   function myFunction() {
+//   // Declare variables
+//   var input, filter, table, tr, td, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("myTable");
+//   tr = table.getElementsByTagName("tr");
+
+//   // Loop through all table rows, and hide those who don't match the search query
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[0];
+//     if (td) {
+//       txtValue = td.textContent || td.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }
+//   }
+// }
+</script>
+</body>
+</html>
